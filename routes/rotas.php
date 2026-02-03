@@ -2,30 +2,30 @@
 
 include "./controller/controlador.php";
 
-$URL = $_SERVER ['REQUEST_URI'];
+$URL = parse_url( $_SERVER ['REQUEST_URI'], PHP_URL_PATH);
 echo $URL;
 
-if($URL == "/canillsenai/"){
+if($URL == "/canil-senai02/"){
     mainPage();
 }
-else if ($URL == "/canillsenai/gatos"){
+else if ($URL == "/canil-senai02/gatos"){
     gatosPage();
 
 }
 
-else if ($URL == "/canillsenai/cachorros"){
+else if ($URL == "/canil-senai02/cachorros"){
     cachorrosPage();
     
 }
 
 
-else if ($URL == "/canillsenai/peixes"){
+else if ($URL == "/canil-senai02/peixes"){
     peixesPage();
     
 }
 
-else if ($URL == "/canillsenai/pesquisa"){
-    echo "rota de pesquisa";
+else if ($URL == "/canil-senai02/pesquisa"){
+    Pesquisapage();
 }
 
 else {
