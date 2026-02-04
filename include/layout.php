@@ -12,10 +12,10 @@
 
 <nav>
     <ul>
-        <li class="active"><a href="/canil-senai02/">Todos</a></li>
-        <li class=""><a href="/canil-senai02/cachorros">Cachorros</a></li>
-        <li class=""><a href="/canil-senai02/gatos">Gatos</a></li>
-        <li class=""><a href="/canil-senai02/peixes">Peixes</a></li>
+        <li class="<?= $active['main'] ?>"><a href="/canil-senai02/">Todos</a></li>
+        <li class="<?= $active['cachorros'] ?>"><a href="/canil-senai02/cachorros">Cachorros</a></li>
+        <li class="<?= $active['gatos'] ?>"><a href="/canil-senai02/gatos">Gatos</a></li>
+        <li class="<?= $active['peixes'] ?>"><a href="/canil-senai02/peixes">Peixes</a></li>
     </ul>
 </nav>
 <?php if( parse_url( $_SERVER ['REQUEST_URI'], PHP_URL_PATH) != "/canil-senai02/pesquisa"): ?>
