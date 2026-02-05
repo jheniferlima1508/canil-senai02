@@ -5,12 +5,14 @@ $active = [
     "cachorros" => "",
     "gatos" => "",
     "peixes" => "",
+    "passaros" => "",
+
 
 ];
 function mainPage(){
     global $items, $active;
     $active['main'] = "active";
-    $banner = "./images/allanimals.jpg";
+    $banner = "./images/a.jpg";
     $title = "todos os animais";
     $content = $items;
 
@@ -46,6 +48,18 @@ function peixesPage(){
     $title = "peixes";
     $content = array_filter($items,function($animal){
         return $animal['type'] == "peixe";
+    });
+
+    include "./include/layout.php";
+}
+
+function passarosPage(){
+    global $items, $active;
+    $active['passaros'] = "active";
+    $banner = "./images/banner_passaros.jpg";
+    $title = "passaros";
+    $content = array_filter($items,function($animal){
+        return $animal['type'] == "passaro";
     });
 
     include "./include/layout.php";

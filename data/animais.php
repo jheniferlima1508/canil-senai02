@@ -119,7 +119,67 @@ $items = [
         'color' => 'preto',
         'genre' => 'masculino',
         'type'  => 'peixe'
-    ]
+    ],
+    [
+        'image' => 'images/calopsita.jpg',
+        'name'  => 'calopsita',
+        'color' => 'amarelo',
+        'genre' => 'fêmea',
+        'type'  => 'passaro'
+    ],
+    [
+        'image' => 'images/canario-do-reino.jpg',
+        'name'  => 'canario do reino',
+        'color' => 'amarelo',
+        'genre' => 'masculino',
+        'type'  => 'passaro'
+    ],
+    [
+        'image' => 'images/diamante-mandarim.jpg',
+        'name'  => 'diamante mandarim',
+        'color' => 'branco,cinza,preto,amarelo e laranja',
+        'genre' => 'masculino',
+        'type'  => 'passaro'
+    ],
+     [
+        'image' => 'images/crejoa.jpg.webp',
+        'name'  => 'crejoá',
+        'color' => 'azul,preto e vinho',
+        'genre' => 'masculino',
+        'type'  => 'passaro'
+    ],
+     [
+        'image' => 'images/currupiao.jpg.webp',
+        'name'  => 'currupião',
+        'color' => 'preto,branco e laranja',
+        'genre' => 'masculino',
+        'type'  => 'passaro'
+    ],
+      [
+        'image' => 'images/soldadinho.jpeg.webp',
+        'name'  => 'soldadinho',
+        'color' => 'preto,branco e vermelho',
+        'genre' => 'masculino',
+        'type'  => 'passaro'
+    ],
+    [
+        'image' => 'images/tie-sangue.jpg.webp',
+        'name'  => 'tiê-sangue',
+        'color' => 'vermelho e preto',
+        'genre' => 'masculino',
+        'type'  => 'passaro'
+    ],
+    [
+        'image' => 'images/guara-vermelho.jpg',
+        'name'  => 'guara vermelho',
+        'color' => 'vermelho',
+        'genre' => 'masculino',
+        'type'  => 'passaro'
+    ],
+    
+
+    
+    
 ];
 
 
