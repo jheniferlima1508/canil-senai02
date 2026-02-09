@@ -1,5 +1,6 @@
 <?php
 include "./data/animais.php";
+include "./model/models.php";
 $active = [
     "main" => "",
     "cachorros" => "",
@@ -14,7 +15,7 @@ function mainPage(){
     $active['main'] = "active";
     $banner = "./images/a.jpg";
     $title = "todos os animais";
-    $content = $items;
+    $content = pegar_todos($items);
 
     include "./include/layout.php";
 }
@@ -24,9 +25,8 @@ function gatosPage(){
     $active['gatos'] = "active";
     $banner = "./images/banner_cat.jpg";
     $title = "Gatos";
-    $content = array_filter($items,function($animal){
-        return $animal['type'] == "gato";
-    });
+    $lista = pegar_todos($items);
+    $content = pegar_tipo("gato",$lista);
     include "./include/layout.php";
 }
 
@@ -35,9 +35,8 @@ function cachorrosPage(){
     $active['cachorros'] = "active";
     $banner = "./images/banner_dog.jpg";
     $title = "cachorros";
-    $content = array_filter($items,function($animal){
-        return $animal['type'] == "cachorro";
-    });
+    $lista = pegar_todos($items);
+    $content = pegar_tipo("cachorro",$lista);
     include "./include/layout.php";
 }
 
@@ -46,10 +45,8 @@ function peixesPage(){
     $active['peixes'] = "active";
     $banner = "./images/banner_fish.jpg";
     $title = "peixes";
-    $content = array_filter($items,function($animal){
-        return $animal['type'] == "peixe";
-    });
-
+    $lista = pegar_todos($items);
+    $content = pegar_tipo("peixe",$lista);
     include "./include/layout.php";
 }
 
@@ -58,21 +55,17 @@ function passarosPage(){
     $active['passaros'] = "active";
     $banner = "./images/banner_passaros.jpg";
     $title = "passaros";
-    $content = array_filter($items,function($animal){
-        return $animal['type'] == "passaro";
-    });
-
+    $lista = pegar_todos($items);
+    $content = pegar_tipo("passaro",$lista);
     include "./include/layout.php";
 }
 
 function Pesquisapage(){
     global $items;
     $nome = $_GET['nome'] ??"";
-    $content = array_filter($items,function($animal) use($nome){
-        return $animal['name'] == $nome;
-    });
-
+    $lista = pegar_todos($items);
+    $content = pegar_nome($lista,$nome);
     include "./include/layout.php";
 }
 
-?>
+?>  
